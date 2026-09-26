@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="shortcut icon" href="./images/maimg.jpg" type="image/x-icon">
+</head>
+
+<body class="bg-primary-subtle bg-gradient">
+
+
+
+  <div class="container-fluid  text-center align-items-start">
+
+    <div class="row">
+
+      <div class="col-12 bg-primary bg-gradient py-2 position-fixed top-0 z-1 w-100">
+        <div class="row">
+
+
+
+          <div class="col-2 text-start ps-2">
+            <img src="./images/maimg.jpg" alt="my picture" class="img-fluid rounded-circle"
+              style="width: 50px; height: 50px; object-fit: cover;">
+          </div>
+
+          <div class="col-6 d-flex justify-content-start align-items-center gap-3">
+            <a href="dashboard.html" class=" text-light text-decoration-none">Home</a>
+            <a href="student.html" class=" text-light  text-decoration-none">Students</a>
+          </div>
+
+          <div class="col-4 text-end pe-4 mt-1 d-flex justify-content-end align-items-center ">
+            <a type="submit" class="btn btn-outline-light fw-bold btn-md" href="index.html">Logout</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="container mt-4 pt-5 ">
+    <div class="row mt-4 align-items-center justify-content-between">
+      <div class="col-6">
+        <div class="ms-4 pe-4 badge bg-black align-middle rounded py-2">
+        <h2 class="text-start ps-4 pe-2 pt-1 text-primary text-shadow">STUDENTS</h2>
+      </div>
+      </div>
+      <div class="col-6 d-flex justify-content-end align-items-center gap-3">
+
+
+       <a class="btn  text-light fw-bold fst-italic" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+  aria-controls="offcanvasExample" style="background: linear-gradient(180deg, rgba(86, 204, 222, 0.8), rgba(64, 199, 230, 0.8), rgba(45, 182, 213, 0.8))">
+
+  Filter
+</a>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header bg-primary bg-gradient">
+    <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel">FILTER STUDENTS</h5>
+    <button type="button" class="btn-close bg-secondary " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <div class="offcanvas-body bg-secondary bg-gradient text-white">
+
+    <div class="mb-4 mt-4">
+      <label class="form-label mb-2 fw-bold text-black">Batch #</label>
+      <select class="form-select" aria-label="Default select example">
+        <option disabled selected>Choose your batch</option>
+        <option value="1">Batch 21</option>
+        <option value="2">Batch 22</option>
+        <option value="3">Batch 23</option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label mb-2 fw-bold d-block text-black">Gender</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genderRadio" id="genderMale" value="male">
+        <label class="form-check-label text-secondary-emphasis" for="genderMale">Male</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genderRadio" id="genderFemale" value="female">
+        <label class="form-check-label text-secondary-emphasis" for="genderFemale">Female</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genderRadio" id="genderOther" value="other">
+        <label class="form-check-label text-secondary-emphasis" for="genderOther">Other</label>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="ageRange" class="form-label fw-bold d-block text-black">Age</label>
+      <input type="range" class="form-range" min="16" max="50" id="ageRange"
+        oninput="document.getElementById('ageRangeOutput').innerText = this.value">
+      <div class="text-center">
+        <span id="ageRangeOutput" class="fw-bold">16</span>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label mb-2 fw-bold d-block text-black">Fees</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="feesRadio" id="feesPaid" value="paid">
+        <label class="form-check-label text-secondary-emphasis" for="feesPaid">Paid</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="feesRadio" id="feesUnpaid" value="unpaid">
+        <label class="form-check-label text-secondary-emphasis" for="feesUnpaid">Unpaid</label>
+      </div>
+    </div>
+
+   <button type="button" class="btn btn-outline-light fw-bold" data-bs-dismiss="offcanvas">Apply</button>
+
+  </div>
+</div>
+        
+        <!-- Button trigger modal -->
+        <button type="button" class="btn text-light pt-2 pb-2 ps-3 pe-3 me-4 fst-italic fw-bold" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop" style="background: linear-gradient(180deg, rgba(96, 209, 227, 0.8), rgba(64, 199, 230, 0.8), rgba(21, 173, 207, 0.8))">
+          + Add Student
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+              <div class="modal-header bg-primary text-white bg-gradient">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Student</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body bg-dark text-white bg-gradient">
+
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp"
+                      placeholder="Enter your full name">
+                    <div id="nameHelp" class="form-text text-white">Your Name must be 8-20 characters long.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleInputtext1" class="form-label">Enrolled Course</label>
+                    <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp"
+                      placeholder="Enter your enrolled course">
+                    <div id="textHelp" class="form-text text-white">Please enter the course you are enrolled in.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleInputtext1" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp"
+                      placeholder="Enter your address required">
+                    <div id="textHelp" class="form-text text-white">Please enter your exact address.</div>
+                  </div>
+
+
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label text-white">Student Image</label>
+                    <input class="form-control" type="file" id="formFile">
+                  </div>
+
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                </form>
+
+              </div>
+              <div class="modal-footer bg-primary bg-gradient text-white">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light text-primary" data-bs-dismiss="modal">Save Changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" id="card-container" >
+    <!-- <div class="row px-4 pt-4 ps-4">
+
+      <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class=" card">
+          <a href="detail.html"> <img src="./images/avatar img.avif" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-black text-white">
+            <h5 class="card-title">M.Ahmed</h5>
+            <p class="card-text">Web Development Student</p>
+
+            <p class="d-inline-flex gap-1 ">
+              <a class="btn btn-primary fst-italic" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                aria-expanded="false" aria-controls="collapseExample">
+                more info
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body bg-secondary bg-gradient text-white">
+                Roll no : WMA-2343 <br>
+                Location : Karachi , Gulshan-e-Iqbal <br>
+                Batch : 23 <br>
+                Status : Active <br>
+                <a href="detail.html" class="btn btn-light text-primary fw-bold w-50 mt-2 text-decoration-none">Full
+                  Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class=" card">
+          <a href="detail.html"> <img src="./images/avatar img.avif" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-black text-white">
+            <h5 class="card-title">Abobakar</h5>
+            <p class="card-text">Web Development Student</p>
+
+            <p class="d-inline-flex gap-1">
+              <a class="btn btn-primary fst-italic" data-bs-toggle="collapse" href="#collapseExample0" role="button"
+                aria-expanded="false" aria-controls="collapseExample0">
+                more info
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample0">
+              <div class="card card-body bg-secondary bg-gradient text-white">
+                Roll no : WMA-2435<br>
+                Location : Karachi , Faisal Base <br>
+                Batch : 24 <br>
+                Status : Active <br>
+                <a href="detail.html" class="btn btn-light text-primary fw-bold w-50 mt-2 text-decoration-none">Full
+                  Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class=" card">
+          <a href="detail.html"> <img src="./images/avatar img.avif" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-black text-white">
+            <h5 class="card-title">Usman</h5>
+            <p class="card-text">Web Development Student</p>
+            <p class="d-inline-flex gap-1">
+              <a class="btn btn-primary fst-italic" data-bs-toggle="collapse" href="#collapseExample1" role="button"
+                aria-expanded="false" aria-controls="collapseExample1">
+                more info
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample1">
+              <div class="card card-body bg-secondary bg-gradient text-white">
+                Roll no : WMA-2436<br>
+                Location : Karachi , Johar <br>
+                Batch : 24 <br>
+                Status : Passed <br>
+                <a href="detail.html" class="btn btn-light text-primary fw-bold w-50 mt-2 text-decoration-none">Full
+                  Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class=" card">
+          <a href="detail.html"> <img src="./images/avatar img.avif" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-black  text-white">
+            <h5 class="card-title">Taha</h5>
+            <p class="card-text">Web Development Student</p>
+            <p class="d-inline-flex gap-1">
+              <a class="btn btn-primary fst-italic" data-bs-toggle="collapse" href="#collapseExample2" role="button"
+                aria-expanded="false" aria-controls="collapseExample2">
+                more info
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample2">
+              <div class="card card-body bg-secondary bg-gradient text-white">
+                Roll no :WMA-2537 <br>
+                Location : Karachi , Gulshan-e-Iqbal <br>
+                Batch : 24 <br>
+                Status : Passed <br>
+                <a href="detail.html" class="btn btn-light text-primary fw-bold w-50 mt-2 text-decoration-none">Full
+                  Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class=" card">
+          <a href="detail.html"> <img src="./images/avatar img.avif" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-black text-white">
+            <h5 class="card-title">Affan</h5>
+            <p class="card-text">Web Development Student</p>
+            <p class="d-inline-flex gap-1">
+              <a class="btn btn-primary fst-italic" data-bs-toggle="collapse" href="#collapseExample3" role="button"
+                aria-expanded="false" aria-controls="collapseExample3">
+                more info
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample3">
+              <div class="card card-body bg-secondary bg-gradient text-white">
+                Roll no : WMA-2638 <br>
+                Location : Karachi , Gulshan-e-Iqbal <br>
+                Batch : 24 <br>
+                Status : Active <br>
+                <a href="detail.html" class="btn btn-light text-primary fw-bold w-50 mt-2 text-decoration-none">Full
+                  Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class=" card">
+          <a href="detail.html"> <img src="./images/avatar img.avif" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-black text-white">
+            <h5 class="card-title">Umar</h5>
+            <p class="card-text">Web Development Student</p>
+            <p class="d-inline-flex gap-1">
+              <a class="btn btn-primary fst-italic" data-bs-toggle="collapse" href="#collapseExample4" role="button"
+                aria-expanded="false" aria-controls="collapseExample4">
+                more info
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample4">
+              <div class="card card-body bg-secondary bg-gradient text-white">
+                Roll no : WMA-2739 <br>
+                Location : Karachi , Johar <br>
+                Batch : 24 <br>
+                Status : Dropout <br>
+                <a href="detail.html" class="btn btn-light text-primary fw-bold w-50 mt-2 text-decoration-none">Full
+                  Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div> -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
